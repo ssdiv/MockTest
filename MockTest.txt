@@ -1,0 +1,334 @@
+1.-->  * Java is a object-oriented programming language.
+       * Java which is used to execute the program , where as javac is used to compile the code.
+
+--------------------------------------------------------------------------------------
+2.-->  *JDK: It is a java development kit.
+         --> JDK=Tools + JRE.
+             ->tools: eg - javac,java.
+         -->which is used to write and execute the code.
+ 
+       *JRE: It is a java runtime environment.
+         -->JRE= libraries(pre-defined programs,jre files) + JVM.
+         -->which is used only for execution.
+
+       *JVM: It is a java vartiual machine.
+         -->It is used to execute the bute code.
+         -->conversion of .java  to  .class(byte code).
+--------------------------------------------------------------------------------
+3.-->Difference between .java file and .class file
+
+  		.java file                .class file
+
+   * It is source code.  		* It is byte code.
+   * It is used to write and 		* It is used for ececution 
+     execute the code 			  purpose.
+-----------------------------------------------------------------------
+4. List of IDE's
+  * Apache.
+  * eclipse IDE.
+--------------------------------------------------------------------
+
+5. Variable:
+      * Variable called as state , attribute etc.
+      * It is used to store the information.
+      * variable can be keyword.
+      * variable can be refname.
+
+    Types of variables:
+
+    1.class level:
+        two types:
+           1 static variables.
+           2 non-static variables.
+
+    2.method level:
+        two types:
+          1 local variables.
+          2 parameters.
+
+1.class level:
+*static variables can access only static.
+*non static variables can access non-static variables.
+
+2.method level:
+*local variables are declared inside the method of the parameter
+* example for static variable:
+ One class:class Bag
+           {
+ 	     static String name;
+             static double cost;
+             static int noOfBags;
+    
+            static void setBag()
+           {
+               System.out.println("info of bag");
+           }
+second class that invoke first class:
+           class BagStarter
+           {
+             public static void nmain(String[] anyname)
+             {
+       		System.out.println("starting of bag");
+		Bag.setBag();
+ 		System.out.println("ending of bag");
+	      }
+        }
+--------------------------------------------------------------------------
+ 6. Object Oriented programming language in java:
+    
+  * It is platform independet
+  * it is a high level programming language.
+  * Object oriented means-real world entity Or thing.
+  * it has four principles:
+      1.polymorphism.
+      2.abstraction.
+      3.encapsulation.
+      4.inheritance.
+---------------------------------------------------------------------
+7.error message:
+* we can't take two main methods in same class.
+* error at the line-->public static void main(String args)  because String[]  
+-----------------------------------------------------------------------
+8. Datatype is a type: It is of two types
+
+  1 primitive datatype.
+  2 non-primitive datatype.
+  
+* In primitive datatype 8 types:
+    1. byte
+    2. short
+    3. int
+    4. float
+    5. double
+    6. long
+    7. boolean
+    8. char
+
+* non-primitive datatype:
+     String,array and any class must become the non-primitive.
+
+example:static varible declaration
+class student
+{
+  static String name;
+  static int age;
+  static long phoneNo;
+  static boolean attendence;
+  static double height;
+  static float number;
+  etc...
+}
+--------------------------------------------------------------------
+9. Dot operator:
+    It is used to access the variable name and method name.
+eg:
+class color
+{
+ System.out.println("hello color is red");
+
+public static void main(String[] args)
+{
+  color();
+}
+}
+--------------------------------------------------------------------------
+10.List of java features:
+
+*simple.
+*robust.
+*reliable.
+*useability.
+etc....
+--------------------------------------------------------------------------
+11.Array:
+
+* Array is a collection of similar elements.
+* Array is used with the index[].
+
+eg:
+class Person
+{
+ static double height[]={4.5,5.5,5.6,5.3,5.9,6};
+
+Person.height[2];
+}
+--------------------------------------------------------------------------
+12. Class:
+* It is a collection of objects.
+* It is template.
+* It is blue print
+
+Object: 
+* It is an instance of a class.
+* Any real world thing or entity can be an object.
+
+eg :
+class Tv
+{
+  static String name;
+  static boolean displayOn;
+
+ static void setName( String name)
+ {
+   Tv.name=name;
+ }
+}
+class TvStarter
+{
+public static void main(String[] args)
+{
+  Tv.setName();
+}
+}
+-----------------------------------------------------------------------------------
+
+13.Keywords:
+      It holds the pre-defined values.
+
+list of 10 keywords:
+1.class
+2.this
+3.if
+4.else
+5.do
+6.while
+7.true
+8.false
+9.implement
+10.return
+------------------------------------------------------------------------------
+14.Constructors:
+
+*It is a special method.
+*constructor name must be as the class name.
+
+eg:
+class Hospital
+{
+ String name;
+ int noOfPatients;
+
+ Hospital()
+ {
+   System.out.println("info of hospital");
+ }
+ Hospital(String name,int noOfHospitals)
+ {
+   this.name=name;
+   this.noOfHospitals=noOfHospitals;
+   System.out.println("name and noOfPatients in hospital..."+name+","+noOfHospitals);
+ }
+}
+
+class HospitalStarter
+{
+public static void main(String[] hospitals)
+{
+  System.out.println("starting");
+  Hospital hospital=new Hospital();
+  System.out.println("hospital name : "+hospital.name);
+  System.out.println("hospital noOfPatients : "+hospital.noOfPatients);
+  System.out.println("ending");
+}
+}
+---------------------------------------------------------------------------------
+
+15. Without main method we can not execute the code.
+    * It is mandatory.
+    * static method can access the static only.
+
+type of methods:
+
+1.static method
+2.non static method
+
+1.static method:
+* it is also called as class.
+* it can access only static.
+
+2.non static:
+* it is an instance.
+* it can acces  non-staic and static.
+-----------------------------------------------------------------------------------
+16.class Numbers
+{
+  static int length[]={12,3,4,45,6,7,6};
+  
+  System.out.println("length of the array : "+length[5]);
+}
+------------------------------------------------------------------------------
+17.Method and Method overloading:
+
+Method:
+ It is a collection of statements.Or
+ It is block of code.
+
+Method overloading:'
+
+* It is method .
+* Which we can give the no of parameters.
+* Changes in the datatypes.
+
+example:
+class Slipper
+{
+  String brand;
+  double length;
+  double width;
+  int cost;
+
+ Slipper()
+{
+  System.out.println("created slipper");
+}
+Slipper(String brand,double length)
+{
+ this.brand=brand;
+ this.length=length;
+ System.out.println("brand and length of the slipper.."+brand+","+length);
+}
+Slipper(double width,int cost)
+{
+this.width=width;
+this.cost=cost;
+System.out.println("width and cost of slipper..."+width+","+cost);
+}
+}
+
+class SlipperStarter
+{
+ public static void main(string[] slippers)
+{
+  System.out.println("Starting main in SlipperStarter");
+
+  Slipper slipper=new Slipper();
+  System.out.println("brand : "+slipper.brand);
+ System.out.println("length : "+slipper.length);
+ System.out.println("width : "+slipper.width);
+ System.out.println("cost : "+slipper.cost);
+
+  Slipper slipper1=new Slipper("nika",5.5);
+  System.out.println("brand : "+slipper1.brand);
+ System.out.println("length : "+slipper1.length);
+System.out.println("width : "+slipper1.width);
+System.out.println("cost : "+slipper1.cost);
+
+  Slipper slipper2=new Slipper("nika",5.5);
+  System.out.println("brand : "+slipper2.brand);
+ System.out.println("length : "+slipper2.length);
+System.out.println("width : "+slipper2.width);
+System.out.println("cost : "+slipper2.cost);
+
+System.out.println("ending main in SlipperStarter");
+
+}
+}
+-------------------------------------------------------------------
+
+
+
+
+
+
+ 
+       
